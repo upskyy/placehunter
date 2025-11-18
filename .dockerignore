@@ -1,0 +1,38 @@
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+
+# Dependencies
+node_modules
+__pycache__
+*.pyc
+venv
+ENV
+
+# IDE
+.vscode
+.idea
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+.next
+dist
+build
+out
+
+# Logs
+*.log
+logs
+
+# Documentation
+*.md
+!README.md
+
