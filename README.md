@@ -2,6 +2,24 @@
 
 도시명과 키워드만 입력하면 구글 평점 기반으로 필터링된 장소를 추천하고, 최적의 여행 동선을 자동으로 만들어주는 웹 서비스입니다.
 
+## 📸 스크린샷
+
+<div align="center">
+
+### 메인 화면 - AI 검색
+![PlaceHunter 메인 화면](asset/image1.png)
+
+### 검색 결과 - 장소 선택
+![검색 결과 화면](asset/image2.png)
+
+### AI 리뷰 분석
+![스탬퍼드 브리지 AI 리뷰 분석](asset/image3.png)
+
+![영국 박물관 AI 리뷰 분석](asset/image4.png)
+
+
+</div>
+
 ## ✨ 주요 기능
 
 ### 검색 & 필터링
@@ -48,7 +66,6 @@
    - [OpenAI Platform](https://platform.openai.com/api-keys)에서 키 생성
    - AI 자연어 검색 및 여행 가이드 기능에 사용
    - 없어도 기본 검색 기능은 정상 작동
-   - 자세한 가이드: `ENV_SETUP.md` 참조
 
 ## 🚀 설치 및 실행
 
