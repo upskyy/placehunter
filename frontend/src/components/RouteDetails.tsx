@@ -14,6 +14,9 @@ interface RouteStep {
   order: number
   estimated_duration_to_next?: number
   estimated_distance_to_next?: number
+  arrival_time?: string
+  departure_time?: string
+  visit_duration?: number
 }
 
 interface ReviewAnalysis {
