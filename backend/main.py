@@ -11,7 +11,7 @@ load_dotenv()
 app = FastAPI(
     title="PlaceHunter API",
     description="여행 장소 추천 및 동선 최적화 API",
-    version="1.0.0"
+    version="1.0.0",
 )
 
 # CORS middleware
@@ -26,7 +26,7 @@ allowed_origins = [
 vercel_url = os.getenv("VERCEL_URL")
 if vercel_url:
     allowed_origins.append(f"https://{vercel_url}")
-    
+
 # Allow any *.vercel.app domain for preview deployments
 app.add_middleware(
     CORSMiddleware,
@@ -43,15 +43,20 @@ app.include_router(route.router, prefix="/api/route", tags=["route"])
 app.include_router(ai.router, prefix="/api/ai", tags=["ai"])
 app.include_router(template.router, prefix="/api/template", tags=["template"])
 
+
 @app.get("/")
 async def root():
-    return {
-        "message": "PlaceHunter API",
-        "version": "1.0.0",
-        "docs": "/docs"
-    }
+    return {"message": "PlaceHunter API", "version": "1.0.0", "docs": "/docs"}
+
 
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
 
+
+# For Railway deployment - run with dynamic port
+if __name__ == "__main__":
+    import uvicorn
+
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
